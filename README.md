@@ -15,7 +15,7 @@ The code works, but only just. It has quality, style and security problems of th
 1. **Run it first** and read the output carefully:
 
    ```
-   python electricity_bill.py
+   uv run electricity_bill.py
    ```
 
    It runs a short demonstration and needs no input. Note what it prints, so you can check that it still behaves the same after your fixes.
@@ -23,15 +23,15 @@ The code works, but only just. It has quality, style and security problems of th
 2. **Install the tools:**
 
    ```
-   python -m pip install pylint bandit flake8
+   uv add pylint bandit flake8
    ```
 
 3. **Run the analysis and save the reports:**
 
    ```
-   python -m pylint electricity_bill.py > pylint_report.txt
-   python -m bandit -r electricity_bill.py > bandit_report.txt
-   python -m flake8 electricity_bill.py > flake8_report.txt
+   uv run pylint electricity_bill.py > pylint_report.txt
+   uv run bandit -r electricity_bill.py > bandit_report.txt
+   uv run flake8 electricity_bill.py > flake8_report.txt
    ```
 
 4. **Document the issues** in `issues.md` using this table (at least 4 rows, high and medium severity first):
